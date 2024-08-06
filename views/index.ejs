@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de inicio</title>
+
+    <link rel="stylesheet" href="/resources/css/style.css">
+</head>
+<body>
+    <div>
+        <% if (login) { %>
+            <div class="Ya_iniciado">
+                <h1>Pagina inicial</h1>
+                <h1>El usuario conectado es: <strong><%= name %></strong></h1>
+                <a href="/logout" class="a-logout">Cerrar sesion</a>
+            </div>
+     <% } else { %>
+        <div class="No_Iniciado">       
+             <h1>Pagina inicial</h1>
+            <h1><strong>Cuenta de usuario no iniciado<br><%= name %>
+            </strong></h1>
+            <br>
+            <a href="/login" class="a-login">Iniciar sesion</a>
+            <a href="/register" class="a-login">Registrarse</a>
+        </div>
+      <% } %>
+   </div>
+</body>
+</html>
